@@ -44,7 +44,7 @@ const navLinks = [
     links: [
       { redirect: "/", name: "Home" },
       { redirect: "/eventmanage", name: "Event Management" },
-      { redirect: "/students", name: "Students" },
+      { redirect: "/studentsCharter", name: "Student Charter" },
     ],
   },
 ];
