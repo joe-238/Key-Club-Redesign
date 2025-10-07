@@ -10,7 +10,7 @@
 import AdminHome from "~/components/adminHome.vue";
 import StudentHome from "~/components/studentHome.vue";
 
-const role = ref("public");
+const role = ref("admin");
 </script>
 
 <style scoped></style>

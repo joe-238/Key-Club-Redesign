@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-const category = ref("public"); //public, student, admin
+const category = ref("admin"); //public, student, admin
 const navLinks = [
   {
     category: "public",
