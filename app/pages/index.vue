@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full min-h-screen flex flex-col items-center">
+  <div class="w-full h-screen flex flex-col items-center overflow-scroll">
     <StudentHome v-if="role === 'student'" />
     <AdminHome v-else-if="role === 'admin'" />
     <public-home v-else-if="role === 'public'" />

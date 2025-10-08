@@ -1,9 +1,7 @@
 <template>
-  <nav class="w-full flex justify-between p-5 items-center bg-green-100">
-    <div class="">
-      <h2 class="font-bold text-xl cursor-pointer">SITHS KEY CLUB</h2>
-    </div>
-    <div class="flex gap-2">
+  <nav class="w-[15%] h-screen flex flex-col pt-10 items-center bg-green-100">
+    <div class="flex flex-col gap-2">
+      <h2 class="font-bold text-xl cursor-pointer mb-4">SITHS KEY CLUB</h2>
       <NuxtLink
         v-for="link in navLinks.find((l) => l.category === category).links"
         :class="
@@ -43,8 +41,8 @@ const navLinks = [
     category: "admin",
     links: [
       { redirect: "/", name: "Home" },
-      { redirect: "/eventmanage", name: "Event Management" },
-      { redirect: "/studentsCharter", name: "Student Charter" },
+      { redirect: "/eventManagement", name: "Event Management" },
+      { redirect: "/studentCharter", name: "Student Charter" },
     ],
   },
 ];
