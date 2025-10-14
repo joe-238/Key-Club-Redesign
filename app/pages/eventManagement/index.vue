@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full h-screen">
     <subPageMenu :pages="eventManagementLinks" :active="'Events'" class="" />
   </div>
 </template>
@@ -12,12 +12,12 @@ const eventManagementLinks = [
     path: "/eventManagement",
   },
   {
-    name: "Funds",
-    path: "/eventManagement/funds",
+    name: "Fundraisers",
+    path: "/eventManagement/fundraisers",
   },
   {
-    name: "Funds",
-    path: "/eventManagement/funds",
+    name: "Service Project",
+    path: "/eventManagement/serviceProject",
   },
 ];
 </script>

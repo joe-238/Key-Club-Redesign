@@ -12,6 +12,7 @@
           type="text"
           placeholder="Search"
           class="outline-none w-auto min-w-[150px] placeholder-gray-400"
+          v-model="filter"
         />
         <!-- filter by osis or name -->
       </div>
@@ -49,7 +50,8 @@
       class="w-[80%] h-fit flex flex-col items-center justify-center rounded-xl"
     >
       <studentCharterCard
-        v-for="student in students"
+        v-for="student in filteredStudents"
+        :key="student.osis"
         :student="student"
       ></studentCharterCard>
     </div>
@@ -58,8 +60,18 @@
 
 <script setup>
 import studentCharterCard from "~/components/studentCharterCard.vue";
+const filter = ref("");
+const filteredStudents = computed(() => {
+  if (!filter.value) return students.value;
+  const hi = filter.value.toLowerCase();
+  return students.value.filter(
+    (student) =>
+      student.name.toLowerCase().includes(hi) ||
+      student.osis.toString().includes(hi)
+  );
+});
 
-const students = [
+const students = ref([
   { name: "Josephine Liu", osis: 123456789, hours: 10, paid: true },
   { name: "Johnny Tang", osis: 987654321, hours: 5, paid: true },
   { name: "Thomas Jiang", osis: 234567891, hours: 0, paid: true },
@@ -84,7 +96,7 @@ const students = [
   { name: "Lucas Kim", osis: 369147258, hours: 4, paid: true },
   { name: "Ella Park", osis: 471369258, hours: 7, paid: true },
   { name: "Noah Lee", osis: 582471369, hours: 0, paid: false },
-];
+]);
 </script>
 
 <style scoped></style>

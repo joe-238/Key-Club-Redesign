@@ -8,8 +8,8 @@
         v-for="link in navLinks.find((l) => l.category === category).links"
         :class="
           link.type === 'btn'
-            ? ' ml-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200'
-            : 'ml-4  p-2 w-full text-blue-800 font-semibold rounded-lg hover:bg-blue-200 transition-colors duration-200'
+            ? '  py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200'
+            : '  p-2 w-full text-blue-800 font-semibold rounded-lg hover:bg-blue-200 transition-colors duration-200'
         "
         :key="link.name"
         :to="link.redirect"

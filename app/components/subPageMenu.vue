@@ -1,6 +1,6 @@
 <template>
   <div class="w-full md:w-1/6 rounded-md p-1">
-    <ul class="flex flex-row flex-wrap gap-2">
+    <ul class="flex flex-row gap-2">
       <li
         v-for="subpage in pages"
         :key="subpage.path"
