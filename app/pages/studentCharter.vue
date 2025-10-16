@@ -14,7 +14,6 @@
           class="outline-none w-auto min-w-[150px] placeholder-gray-400"
           v-model="filter"
         />
-        <!-- filter by osis or name -->
       </div>
       <div class="w-fit flex items-center space-x-2">
         <div class="flex flex-wrap gap-2">
@@ -63,11 +62,11 @@ import studentCharterCard from "~/components/studentCharterCard.vue";
 const filter = ref("");
 const filteredStudents = computed(() => {
   if (!filter.value) return students.value;
-  const hi = filter.value.toLowerCase();
+  const nameLower = filter.value.toLowerCase();
   return students.value.filter(
     (student) =>
-      student.name.toLowerCase().includes(hi) ||
-      student.osis.toString().includes(hi)
+      student.name.toLowerCase().includes(nameLower) ||
+      student.osis.toString().includes(nameLower)
   );
 });
 
